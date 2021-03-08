@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<components xmlns="http://schemas.haulmont.com/cuba/components.xsd">
+	<component>
+		<name>durationField</name>
+		<componentLoader>gr.netmechanics.cuba.df.web.gui.xml.layouts.loaders.DurationFieldLoader</componentLoader>
+		<class>gr.netmechanics.cuba.df.web.gui.components.WebDurationField</class>
+	</component>
+</components>

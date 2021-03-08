@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+			   dependsOn="com.haulmont.cuba">
+
+	<module name="global" blocks="*">
+		<artifact name="nmcdf-global" appJar="true"/>
+
+		<property name="cuba.persistenceConfig" value="+gr/netmechanics/cuba/df/persistence.xml"/>
+		<property name="cuba.metadataConfig" value="+gr/netmechanics/cuba/df/metadata.xml"/>
+		<property name="cuba.viewsConfig" value="+gr/netmechanics/cuba/df/views.xml"/>
+	</module>
+	<module name="core" dependsOn="global" blocks="core">
+		<artifact name="nmcdf-core" appJar="true"/>
+
+		<property name="cuba.springContextConfig" value="+gr/netmechanics/cuba/df/spring.xml"/>
+		<property name="cuba.mainMessagePack" value="+gr.netmechanics.cuba.df.core"/>
+	</module>
+	<module name="web" dependsOn="global" blocks="web">
+		<artifact name="nmcdf-web" appJar="true"/>
+		<artifact name="nmcdf-web" classifier="web" ext="zip" configuration="webcontent"/>
+
+		<property name="cuba.springContextConfig" value="+gr/netmechanics/cuba/df/web-spring.xml"/>
+		<property name="cuba.dispatcherSpringContextConfig" value="+gr/netmechanics/cuba/df/web-dispatcher-spring.xml"/>
+		<property name="cuba.windowConfig" value="+gr/netmechanics/cuba/df/web-screens.xml"/>
+		<property name="cuba.menuConfig" value="+gr/netmechanics/cuba/df/web-menu.xml"/>
+		<property name="cuba.permissionConfig" value="+gr/netmechanics/cuba/df/web-permissions.xml"/>
+		<property name="cuba.mainMessagePack" value="+gr.netmechanics.cuba.df.web"/>
+	</module>
+</app-component>

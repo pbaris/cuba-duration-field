@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://schemas.netmechanics.gr/cuba/ui-component.xsd"
+		   elementFormDefault="qualified"
+		   targetNamespace="http://schemas.netmechanics.gr/cuba/ui-component.xsd"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="durationField">
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:string"/>
+
+			<xs:attribute name="caption" type="xs:string"/>
+			<xs:attribute name="height" type="xs:string"/>
+			<xs:attribute name="width" type="xs:string"/>
+			<xs:attribute name="inputPrompt" type="xs:string"/>
+
+			<xs:attribute name="dataContainer" type="xs:string"/>
+			<xs:attribute name="property" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
