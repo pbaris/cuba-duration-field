@@ -28,8 +28,8 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'gr.netmechanics.cuba.df'
-        version = '0.1'
-        isSnapshot = true
+        version = '1.0.1'
+        isSnapshot = false
     }
 }
 
